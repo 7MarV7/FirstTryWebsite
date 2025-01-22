@@ -1,0 +1,203 @@
+:root {
+    --primary-bg-color: rgba(86, 151, 11, 0.925);
+    --header-bg-color: rgba(248, 249, 250, 0.349);
+    --footer-bg-color: rgba(255, 255, 255, 0.925);
+    --link-bg-color: rgb(255, 255, 255);
+    --link-hover-bg-color: #0c8608;
+    --link-color: #333;
+    --link-hover-color: #000;
+    --font-family: Arial, sans-serif;
+    --font-size-large: 1.5em;
+    --font-size-medium: 1em;
+    --font-size-small: 0.8em;
+    --font-size-xsmall: 0.7em;
+    --header-padding: 15px;
+    --footer-padding: 10px 10px 25px;
+    --link-padding: 5px 20px;
+    --link-padding-small: 3px 8px;
+    --link-padding-medium: 5px 10px;
+    --content-padding: 20px;
+    --border-radius: 10px;
+    --transition-time: 0.3s;
+    --max-width: 1300px;
+    --header-height: 70px;
+    --banner-width: 100%; /* Feste Breite für das Banner */
+    --banner-height: 900px; /* Feste Höhe für das Banner */
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-family);
+    background-color: var(--primary-bg-color);
+    box-sizing: border-box;
+    overflow-y: auto; /* Fügt eine vertikale Scrollbar hinzu */
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.header-container, .headbanner, main, footer {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.menueLinksHeader, .menueLinksFooter {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    margin: 0;
+    padding: var(--header-padding);
+    background-color: var(--header-bg-color);
+}
+
+.menueLinksHeader {
+    justify-content: flex-start;
+}
+
+.menueLinksFooter {
+    justify-content: center;
+    flex-wrap: wrap; /* Umbrüche bei kleinen Bildschirmen ermöglichen */
+    gap: 10px; /* Abstand zwischen den Links */
+    padding: var(--footer-padding);
+    background-color: var(--footer-bg-color);
+    text-align: center;
+    max-width: var(--max-width);
+    border-radius: 15px;
+}
+
+.menueLinksHeader a, .menueLinksFooter a {
+    font-size: var(--font-size-large);
+    text-decoration: none;
+    color: var(--link-color);
+    margin-left: 5px;
+    background-color: var(--link-bg-color);
+    padding: var(--link-padding);
+    border: 1px solid transparent;
+    border-radius: var(--border-radius);
+    transition: background-color var(--transition-time), color var(--transition-time);
+}
+
+.menueLinksHeader a:hover, .menueLinksFooter a:hover {
+    color: var(--link-hover-color);
+    background-color: var(--link-hover-bg-color);
+}
+
+.headbanner {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    width: var(--banner-width); /* Feste Breite für das Banner */
+    height: var(--banner-height); /* Feste Höhe für das Banner */
+    border-style: solid;
+}
+
+.headbanner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Bild wird vollständig innerhalb des Containers angezeigt */
+}
+
+.content-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.content {
+    text-align: center;
+    font-size: 2em;
+    font-weight: 900;
+    padding: var(--content-padding);
+    max-width: var(--max-width);
+    width: 100%;
+    flex: 1;
+}
+
+.homeContentText {
+    text-align: center;
+    font-size: var(--font-size-medium);
+    font-weight: 700;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: var(--max-width);
+}
+
+footer {
+    background-color: var(--header-bg-color);
+    padding: var(--footer-padding);
+    text-align: center;
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-copyright {
+    margin-top: 15px;
+    font-size: var(--font-size-small);
+}
+
+@media (max-width: 768px) {
+    .menueLinksHeader a, .menueLinksFooter a {
+        font-size: var(--font-size-medium);
+        padding: var(--link-padding-medium);
+    }
+
+    .content {
+        font-size: 1.5em;
+    }
+
+    .homeContentText {
+        font-size: 0.9em;
+    }
+
+    .headbanner {
+        height: 200px; /* Kleinere Höhe für kleinere Bildschirme */
+    }
+
+    .headbanner img {
+        height: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .menueLinksHeader a, .menueLinksFooter a {
+        font-size: var(--font-size-small);
+        padding: var(--link-padding-small);
+    }
+
+    .content {
+        font-size: 1.2em;
+    }
+
+    .homeContentText {
+        font-size: var(--font-size-xsmall);
+    }
+
+    .headbanner {
+        height: 150px; /* Kleinere Höhe für sehr kleine Bildschirme */
+    }
+
+    .headbanner img {
+        height: 100%;
+    }
+}

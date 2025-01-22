@@ -1,0 +1,9 @@
+####Für die Homepage Fleischere Haase####
+
+- Infos für Über Uns und Serviceleistungen ---Angefragt---
+- Hamburger Menue ---In Bearbeitung---
+- Barrierefreiheit (Screenreader)
+- Media Querrys (Responsive Design)
+- Anpassung der Bildgrößen
+- Google Service im Impressum einbinden
+- Cookie Seite erstellen

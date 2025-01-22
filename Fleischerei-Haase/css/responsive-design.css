@@ -1,0 +1,152 @@
+/*=========================================== 
+Autor: 7MarV7
+file: responsive-design.css
+Date: 20.07.2024
+Last changes: 09.09.2024  
+===========================================*/
+
+
+
+
+
+/*Header, Navigation*/
+/* Media Query for max screens 768px */
+
+@media (max-width: 768px) {
+    .header-nav ul {
+        display: none;
+        flex-direction: column;
+        background-image: url(../pictures/marmor.png);
+        border-radius: 1rem 1rem 2rem 2rem;
+        background-size: cover;
+        padding: 1rem;
+        position: absolute;
+        top: 60px; 
+        left: 0;
+        width: 95%;
+        box-shadow: 4px 4px 8px;
+    }
+
+    .header-nav ul.nav-active {
+        display: flex;
+    }
+
+    .header-nav ul li {
+        margin-bottom: 0; 
+    }
+
+    .header-nav ul li:last-child {
+        margin-bottom: 0; 
+    }
+
+    .header-nav ul li a {
+        padding: 0.5rem 0; 
+        text-align: center;
+        margin-top: 0;
+        width: 80%;
+    }
+
+    /*Hamburger Menue*/
+
+    .hamburger-menu {
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+        justify-content: space-between;
+        width: 20px;
+        height: 15px;
+    }
+
+    .hamburger-menu span {
+        display: block;
+        height: 3px;
+        width: 100%;
+        background-color: white;
+        border-radius: 2px;
+    }
+
+    .socials {
+        display: flex; 
+        flex-direction: row; 
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 1rem;
+    }
+    
+    .copyright {
+        text-align: center;
+        margin-left: 1.5rem;
+    }
+
+    .global-grid-container {
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+            "header"
+            "nav"
+            "main"
+            "right"
+            "footer";
+    }
+
+    .right-side-grid {
+        order: 3;
+    }
+
+    .header-nav, .home-footer {
+        padding: 1rem;
+    }
+
+    .header-nav ul li a, .footer-nav ul li a {
+        font-size: 1rem;
+    }
+}
+
+/* Media Query for max screens 480px */
+@media (max-width: 480px) {
+    .header-nav ul {
+        width: 90%; 
+    }
+
+    .hamburger-menu {
+        width: 30px; 
+        height: 20px;
+    }
+
+    .header-nav ul li a {
+        font-size: 0.9rem; 
+    }
+
+    .copyright {
+        text-align: center; 
+    }
+
+    .global-grid-container {
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+            "header"
+            "main"
+            "footer"; 
+    }
+
+    .right-side-grid {
+        display: none; 
+    }
+
+    .content-wrapper {
+        padding: 1rem; 
+    }
+
+    h1, h2, h3, p {
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+
+    .socials {
+        display: flex; 
+        flex-direction: row; 
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 1rem;
+    }
+    
+}
